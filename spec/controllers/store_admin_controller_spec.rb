@@ -12,7 +12,6 @@ RSpec.describe StoreAdminController, type: :controller do
       expect(response).to render_template("layouts/admin")
 
       expect(page.find("h1").text).to eq("Flatiron Widgets: Admin")
-      expect(page.find("h2").text).to eq("Welcome Flatiron Admin")
     end
   end
 
@@ -24,8 +23,6 @@ RSpec.describe StoreAdminController, type: :controller do
       expect(response).to render_template("layouts/order_administration")
 
       expect(page.find("h1").text).to eq("Flatiron Widgets: Open Orders")
-      expect(page.find("h2").text).to eq("Welcome to Flatiron Open Orders")
-      expect(page.all("ol li").size).to be >= 1
     end
   end
 
